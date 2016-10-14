@@ -18,13 +18,13 @@
 # TODO: switch to ssl-benchmark
 # include_controls 'ssl-benchmark'
 
-control 'tls1.2' do
-  title 'Run TLS 1.2 whenever SSL is active on a port'
-  impact 0.5
-  describe ssl(port: 443).protocols('tls1.2') do
-    it { should be_enabled }
-  end
-end
+# control 'tls1.2' do
+#   title 'Run TLS 1.2 whenever SSL is active on a port'
+#   impact 0.5
+#   describe ssl(port: 443).protocols('tls1.2') do
+#     it { should be_enabled }
+#   end
+# end
 
 control 'tls1.0' do
   title 'Disable tls1.0 from all exposed ports.'
